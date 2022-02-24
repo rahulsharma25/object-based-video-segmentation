@@ -1,4 +1,4 @@
-# object-based-video-segmentation
+# Object based Video Segmentation using Yolo
 
 > This repo contains two files. predict-yolov3.py uses the Yolo v3 pretrained model and predict-tiny-yolo.py uses Yolo-tiny pretrained model for inference generation.
 

@@ -20,8 +20,6 @@ if __name__ == "__main__":
     CONFIDENCE_THRESHOLD = 0.5
     NMS_THRESHOLD = 0.4
 
-    cp = cv.VideoCapture('test.mp4')
-    ORIGINAL_FPS = int(cp.get(cv.CAP_PROP_FPS))
 
     # Load the yolo model using pretrained weights and model configurations.
     model = cv.dnn.readNet('yolov3.weights', 'yolov3.cfg')
@@ -60,6 +58,8 @@ if __name__ == "__main__":
 
     # Initialize a VideoCapture object to capture frames of the video.
     cap = cv.VideoCapture('test.mp4')
+    ORIGINAL_FPS = int(cap.get(cv.CAP_PROP_FPS))
+
 
     # A list to record various raw timstamps with most confident category of that time period
     timestamps_with_categories = []
